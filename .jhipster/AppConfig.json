@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031340",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "app_config",
+  "fields": [
+    {
+      "fieldName": "configKey",
+      "fieldType": "ConfigKey",
+      "fieldValues": "HOME_SLIDER_STATUS,HOME_SLIDER_ITEM,HOME_STORY_STATUS,HOME_STORY_ITEM"
+    },
+    {
+      "fieldName": "configValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AppConfig",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

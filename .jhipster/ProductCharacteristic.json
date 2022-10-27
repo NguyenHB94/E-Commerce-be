@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031343",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product_characteristic",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "ProductCharacteristicType",
+      "fieldValues": "SIZE,COLOR"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ProductCharacteristic",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

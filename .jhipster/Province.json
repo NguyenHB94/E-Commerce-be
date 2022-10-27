@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031354",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "province",
+  "fields": [
+    {
+      "fieldName": "provinceName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "provinceType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Province",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "district",
+      "otherEntityRelationshipName": "province",
+      "relationshipName": "district",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "province",
+      "relationshipName": "customer",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "shopOrder",
+      "otherEntityRelationshipName": "province",
+      "relationshipName": "shopOrder",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

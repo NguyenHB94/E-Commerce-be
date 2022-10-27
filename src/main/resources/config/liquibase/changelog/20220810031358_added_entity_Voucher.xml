@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="2022081003138-1" author="jhipster">
+        <createTable tableName="voucher">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="voucher_id" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="valid_to" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="valid_from" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="voucher_value" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="min_value" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="max_value" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="voucher_status" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="value_type" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="voucher_quantity" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="created_by" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="modified_by" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+            <column name="modified_date" type="bigint">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2022081003138-2" author="jhipster">
+        <createTable tableName="customer_voucher">
+            <column name="voucher_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="customer_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="voucher_id, customer_id" tableName="customer_voucher"/>
+
+        <addForeignKeyConstraint baseColumnNames="voucher_id"
+                                 baseTableName="customer_voucher"
+                                 constraintName="fk_voucher_voucherId"
+                                 referencedColumnNames="id"
+                                 referencedTableName="voucher"/>
+
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="customer_voucher"
+                                 constraintName="fk_voucher_customerId"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+    </changeSet>
+
+
+</databaseChangeLog>

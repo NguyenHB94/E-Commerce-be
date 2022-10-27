@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031356",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ward",
+  "fields": [
+    {
+      "fieldName": "wardName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "wardType",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ward",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "district",
+      "otherEntityRelationshipName": "ward",
+      "relationshipName": "district",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "ward",
+      "relationshipName": "customer",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "shopOrder",
+      "otherEntityRelationshipName": "ward",
+      "relationshipName": "shopOrder",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

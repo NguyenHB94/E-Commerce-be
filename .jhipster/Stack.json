@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031357",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "stack",
+  "fields": [
+    {
+      "fieldName": "product",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stackId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Stack",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

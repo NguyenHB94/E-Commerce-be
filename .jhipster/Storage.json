@@ -1,0 +1,74 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031351",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "storage",
+  "fields": [
+    {
+      "fieldName": "capacity",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Storage",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "storage",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "productSize",
+      "otherEntityRelationshipName": "storage",
+      "relationshipName": "productSize",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "color",
+      "otherEntityRelationshipName": "storage",
+      "relationshipName": "color",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "store",
+      "otherEntityRelationshipName": "storage",
+      "relationshipName": "store",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "orderDesc",
+      "otherEntityRelationshipName": "storage",
+      "ownerSide": false,
+      "relationshipName": "orderDesc",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

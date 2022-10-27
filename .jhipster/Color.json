@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220810031342",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "color",
+  "fields": [
+    {
+      "fieldName": "colorName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "300"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "hexValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Color",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "storage",
+      "otherEntityRelationshipName": "color",
+      "relationshipName": "storage",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

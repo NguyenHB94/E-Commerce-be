@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity ShopOrder.
+    -->
+    <changeSet id="20220810031349-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="province_id"
+                                 baseTableName="shop_order"
+                                 constraintName="fk_shop_order__province_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="province"/>
+
+        <addForeignKeyConstraint baseColumnNames="district_id"
+                                 baseTableName="shop_order"
+                                 constraintName="fk_shop_order__district_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="district"/>
+
+        <addForeignKeyConstraint baseColumnNames="ward_id"
+                                 baseTableName="shop_order"
+                                 constraintName="fk_shop_order__ward_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ward"/>
+
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="shop_order"
+                                 constraintName="fk_shop_order__customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+    </changeSet>
+</databaseChangeLog>
